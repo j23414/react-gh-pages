@@ -10,6 +10,11 @@ To create the React app, I'll be using [`create-react-app`](https://create-react
 
 If you follow along with this tutorial, you'll end up with a new React app—hosted on GitHub Pages—which you can then customize.
 
+## Translations
+
+This tutorial has been translated from its original English into the following languages:
+- [Traditional Chinese](https://github.com/gitname/react-gh-pages/issues/167#issuecomment-1925551338) (credit: [@creaper9487](https://github.com/creaper9487))
+
 # Tutorial
 
 ## Prerequisites
@@ -83,6 +88,12 @@ At this point, your GitHub account contains an empty repository, having the name
 
     > In addition to containing the source code of the React app, that folder is also a Git repository. That characteristic of the folder will come into play in Step 6.
 
+    > #### Branch names: `master` vs. `main`
+    > 
+    > The Git repository will have one branch, which will be named either (a) `master`, the default for a fresh Git installation; or (b) the value of the Git configuration variable, `init.defaultBranch`, if your computer is running Git version 2.28 or later _and_ you have [set that variable](https://github.blog/2020-07-27-highlights-from-git-2-28/#introducing-init-defaultbranch) in your Git configuration (e.g. via `$ git config --global init.defaultBranch main`).
+    >
+    > Since I have not set that variable in my Git installation, the branch in my repository will be named `master`. In case the branch in your repository has a different name (which you can check by running  `$ git branch`), such as `main`; you can **replace** all occurrences of `master` throughout the remainder of this tutorial, with that other name (e.g. `master` → `main`).
+
 2. Enter the newly-created folder:
   
     ```shell
@@ -93,7 +104,7 @@ At this point, there is a React app on your computer and you are in the folder t
 
 ### 3. Install the `gh-pages` npm package
 
-1. Install the [`gh-pages`](https://github.com/tschaub/gh-pages) npm package and designate it as a [development dependency](https://nodejs.dev/learn/npm-dependencies-and-devdependencies):
+1. Install the [`gh-pages`](https://github.com/tschaub/gh-pages) npm package and designate it as a [development dependency](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file):
  
     ```shell
     $ npm install gh-pages --save-dev
